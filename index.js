@@ -64,17 +64,24 @@ var dataSets = [
     '{"name":"某日某项目所有历史告警","url":"alarm/alldev/get","params":["ProjectCode","Date"],"field":["DeviceID","DataCode","CollectData","AlarmID","AlarmLevel","AlarmType","Alarmtime","AlarmInfo"]}'
 ];
 
-/**
- * 循环测试每个接口
- */
-for (var i = 0; i < dataSets.length; i++) {
-  
-}
+$("#startTest").on('click', function () {
+    /**
+     * 循环测试每个接口
+     */
+    for (var i = 0; i < dataSets.length; i++) {
+        var requestInfo = JSON.parse(dataSets[i]);
+        var name = requestInfo.name;
+        var url = requestInfo.url;
+        var params = requestInfo.params;
+        var field = requestInfo.field;
+        sendRequest(name, url, params, field);
+    }
 
+    /** 
+     * 发送请求
+    */
+    function sendRequest(name, url, params, field) {
 
-/** 
- * 发送请求
-*/
-function sendRequest(){
+    }
+});
 
-}
