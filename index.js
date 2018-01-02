@@ -162,8 +162,13 @@ $(function () {
                 if (data.length == 0) {
                     $("#res").append("<div class='res-result'>" + name + url + ":无任何数据！</div><br/>");
                 } else {
-
-                    $("#res").append("<div class='res-result normal'>" + name + url + ": 接口执行正常！</div><br/>");
+                    $("#res").append("<div class='res-result normal'>" + name + url + ":");
+                    for (var j = 0; j < field.length; j++) {
+                        if (data[0][field[j]] === undefined) {
+                            $("#res").append("<span style='color:red'>"+field[j] + ":不存在！</span>");
+                        }
+                    }
+                    $("#res").append("</div><br/>");
                 }
             } else {
                 $("#res").append("<div class='res-result error'>" + name + url + "：服务端报错了</div><br/>");
