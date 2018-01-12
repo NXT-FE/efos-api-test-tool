@@ -47,7 +47,7 @@ $(function () {
         '{"name":"项目下所有设备参数","url":"deviceparame/get","params":["ProjectCode"],"field":["DataCode","DataName","Unit"]}',
         '{"name":"项目房间(导航)与环境监测设备","url":"navparame/get","params":["ProjectCode"],"field":["NavCode","NavName","ParamName","DeviceID","DataCode"]}',
         '{"name":"设备采集参数","url":"datamapping/get","params":["ProjectCode"],"field":["DeviceID","DeviceName","DataCode","DataName"]}',
-        '{"name":"告警条件配置","url":"alarmconfig/get","params":["ProjectCode"],"field":["DeviceID","DeviceName","DataCode","DataName","Expression","AlarmLevel"]}',
+        '{"name":"告警条件配置","url":"alarmconfig/get","params":["ProjectCode"],"field":["DeviceID","DeviceName","DataCode","DataName","Expression","AlarmLevel","AlarmTypeID"]}',
 
         '{"name":"某项目所有设备当前实时数据","url":"realdata/get","params":["ProjectCode"],"field":["DeviceID","DataCode","CollectTime","CollectData"]}',
         '{"name":"某项目某设备当前实时数据","url":"realdata/get","params":["ProjectCode","DeviceID"],"field":["DeviceID","DataCode","CollectTime","CollectData"]}',
